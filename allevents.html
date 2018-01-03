@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+  <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
+  <style>
+    body {
+    background-color: #ffe0cc;
+    }
+    table {
+      font-family: proxima-nova, sans-serif;
+      margin: 1em auto;
+      color: #ff3333;
+    }
+    a:link, a:visited {
+      font-family: proxima-nova, sans-serif;
+      color: red;
+    }
+  </style>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="mySidenav" class="sidenav">
+      <a href="/">Home</a>
+      <a href="/dateevents">Choose by Date</a>
+    </div>
+    <div id="map"></div>
+    <table id="myTable" border=1 frame=void rules=rows>
+      <tr>
+        <th>
+          Events
+        </th>
+        <th>
+          Date
+        </th>
+      </tr>
+    </table>
+    <script src="/static/scriptall.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key={{ key | urlencode }}&v=3.exp"async defer></script>
+  </body>
+</html>

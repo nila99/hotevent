@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+  <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
+  <style>
+    body {
+    background-color: #ffe0cc;
+    }
+    table {
+      font-family: proxima-nova, sans-serif;
+      margin: 1em auto;
+      color: #ff3333;
+    }
+    a:link, a:visited {
+      font-family: proxima-nova, sans-serif;
+      color: red;
+    }
+    form {
+      font-family: proxima-nova, sans-serif;
+      color: #ff3333;
+      text-align: center;
+      font-size: 150%;
+    }
+    p {
+      font-family: proxima-nova, sans-serif;
+      font-size: 150%;
+      color: #ff3333;
+      text-align: center;
+    }
+  </style>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="mySidenav" class="sidenav">
+      <a href="/">Home</a>
+      <a href="/allevents">All Events</a>
+    </div>
+    <form method="POST">
+      Enter date:
+      <input type="date" name="date">
+      <input type="button" id="submit" value="Submit">
+    </form>
+    <div id="map"></div>
+    <table id="myTable" border=1 frame=void rules=rows>
+      <thead>
+        <tr>
+          <th>
+            Events
+          </th>
+          <th>
+            Date
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+    <div id="userdate"></div>
+    <div id="check"></div>
+    <script src="/static/script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key={{ key | urlencode }}&v=3.exp"async defer></script>
+  </body>
+</html>
